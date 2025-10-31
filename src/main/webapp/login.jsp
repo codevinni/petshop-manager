@@ -1,30 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+ 
 <!DOCTYPE html>
 
-<html>
+<html data-theme="light">
 
 	<head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-		<title>Petshop Manager</title>
+		<title>Login - Petshop Manager</title>
+		
 		
 		<!-- Bulma CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+		
+		<link rel="stylesheet" type="text/css" href="css/login.css">
 	</head>
-	
+
 	<body>
 		
-		<div class="container is-fluid">
+		<c:import url="header.jsp"></c:import>
+		
+		<div id="login-box" class="container is-fluid">
 	
 			<div class="field">
 				<p class="control has-icons-left has-icons-right">
-					<input class="input" type="email" placeholder="Email">
+					<input class="input" type="text" placeholder="User">
 					<span class="icon is-small is-left">
 						<i class="fas fa-user"></i>
-					</span>
-					<span class="icon is-small is-right">
-						<i class="fas fa-check"></i>
 					</span>
 				</p>
 			</div>
@@ -49,6 +52,8 @@
 		</div>
 		
 	</body>
+	
+
 	
 	<script src="https://kit.fontawesome.com/42a12cf5f7.js"></script>
 	

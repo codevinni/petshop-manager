@@ -1,0 +1,22 @@
+:root {
+  --bulma-link: #339a69 !important;
+}
+
+#login-box {
+	width: 550px !important;
+	margin-top: 90px;
+	text-align: center;
+}
+
+.button.is-success {
+	width: 30%;
+	background-color: #339a69;
+	font-weight: bold;
+	color: white;
+	margin-top: 13px;
+}
+
+.input:focus {
+	border-color: #339a69 !important;
+	box-shadow: 0 0 0 0.125em rgba(51, 154, 105, 0.25) !important;
+}

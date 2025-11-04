@@ -25,7 +25,7 @@
 	
 			<div class="field">
 				<p class="control has-icons-left has-icons-right">
-					<input class="input" type="text" placeholder="User">
+					<input class="input is-medium" type="text" placeholder="User">
 					<span class="icon is-small is-left">
 						<i class="fas fa-user"></i>
 					</span>
@@ -34,7 +34,7 @@
 			
 			<div class="field">
 				<p class="control has-icons-left">
-					<input class="input" type="password" placeholder="Password">
+					<input class="input is-medium" type="password" placeholder="Password">
 					<span class="icon is-small is-left">
 					<i class="fas fa-lock"></i>
 					</span>
@@ -43,7 +43,7 @@
 			
 			<div class="field">
 				<p class="control">
-					<button class="button is-success">
+					<button class="is-medium button is-success">
 						Login
 					</button>
 				</p>

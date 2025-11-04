@@ -1,0 +1,31 @@
+.ps-sidebar {
+	background-color: #339a69 !important;
+	color: white;
+	padding: 40px 0px 0px 40px !important;
+	height: 100%;
+	border-radius: 20px;
+	margin-left: 60px;
+}
+
+.ps-sidebar a {
+	color: white;
+	width:80%;
+	font-weight: 600;
+	border-radius: 8px;
+	background-color: #339a69 !important;
+	font-size: 20px;
+}
+
+.ps-sidebar a.is-active {
+	background-color: white !important;
+	color: #f1b722;
+}
+
+.menu-list{
+	text-align: center;
+}
+
+.menu-label{
+	font-size: 17px;
+	color: #d9d9d9;
+}

@@ -1,0 +1,36 @@
+:root {
+  --bulma-link: #339a69 !important;
+}
+
+.input{
+	border-radius: 10px !important;
+	width: 400px !important;
+}
+
+.input:focus {
+	border-color: #339a69 !important;
+	box-shadow: 0 0 0 0.125em rgba(51, 154, 105, 0.25) !important;
+}
+
+.button.is-success {
+	background-color: #339a69;
+	font-weight: bold;
+	color: white;
+	border-radius: 10px;
+}
+
+.ps-main {
+	height: 100vh;
+	width: 90% !important;
+	display: flex !important;
+	flex-direction: row !important;
+	gap: 20px !important;
+	margin-top: 5px !important;
+}
+
+.ps-content {
+	padding: 20px !important;
+	background-color: #f4f4f4 !important;
+	border-radius: 20px;
+	box-sizing: border-box;
+}

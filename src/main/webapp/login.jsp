@@ -10,16 +10,15 @@
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 		<title>Login - Petshop Manager</title>
 		
-		
 		<!-- Bulma CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 		
-		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css">
 	</head>
 
 	<body>
 		
-		<c:import url="header.jsp"></c:import>
+		<c:import url="/components/header.jsp"></c:import>
 		
 		<div id="login-box" class="container is-fluid">
 	
@@ -52,8 +51,6 @@
 		</div>
 		
 	</body>
-	
-
 	
 	<script src="https://kit.fontawesome.com/42a12cf5f7.js"></script>
 	

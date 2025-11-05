@@ -16,12 +16,12 @@
 		<!-- Animate -->
 		<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 		
-		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/home.css">
 	</head>
 
 	<body class="animate__animated">
 		
-		<c:import url="header.jsp"></c:import>
+		<c:import url="/components/header.jsp"></c:import>
 		
 		<section class="hero-container container is-fluid">
 
@@ -31,7 +31,7 @@
 	                A GERENCIAR O<br>
 	                SEU PETSHOP
 	            </h2>
-	            <a href="login.jsp" id="button">Fazer Login</a>
+	            <a href="${pageContext.request.contextPath}/login.jsp" id="button">Fazer Login</a>
 	        </div>
 	
 	        <div class="animate__animated animate__bounceInRight right-container">
@@ -40,7 +40,7 @@
 	            </div>
 	
 	            <div class="dog-box">
-	                <img src="assets/img/golden-dog.png" alt="Golden">
+	                <img src="${pageContext.request.contextPath}/assets/img/golden-dog.png" alt="Golden">
 	            </div>
 	        </div>
 

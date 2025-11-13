@@ -1,7 +1,9 @@
+<%@page import="java.time.format.DateTimeFormatter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ include file="/aut.jsp" %>
 
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="light">
@@ -14,6 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/dashboard-layout.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/clients.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/views.css">
 
 </head>
 
@@ -38,11 +42,39 @@
                     <input class="input" type="text" placeholder="Buscar por ...">
                 </div>
 
-                <button class="button is-success">
+                <a href="${pageContext.request.contextPath}/registers/client-register.jsp" class="button is-success">
                     Novo Cliente
-                </button>
+                </a>
                 
             </div>
+           
+           	<table class="table is-fullwidth is-hoverable ps-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Nascimento</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                
+                	<jsp:useBean id="dao" class="br.tsi.petshop.dao.ClientDAO" />
+                	
+                	<c:forEach var="client" items="${dao.clientsList()}" varStatus="id">
+						<tr>
+							<td>${client.name}</td>
+							<td>${client.cpfFormatted}</td>
+							<td>${client.birthFormatted}</td>
+							<td>${client.email}</td>
+							<td>${client.number}</td>
+						</tr>
+					</c:forEach>
+                
+                </tbody>
+            </table>
            
         </div>
         

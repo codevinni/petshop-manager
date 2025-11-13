@@ -12,8 +12,9 @@
 
 	<body>
 	
+		<br><br>
 		<footer class="ps-footer">
-        	Sessão: 
+			© 2025 Cao Q Late | Todos os direitos reservados
     	</footer>
 		
 	</body>

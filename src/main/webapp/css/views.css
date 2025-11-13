@@ -1,0 +1,9 @@
+.ps-table{
+	margin-top: 40px !important;
+	border-radius: 15px !important;
+}
+
+.ps-table th,
+.ps-table td {
+	vertical-align: middle;
+}

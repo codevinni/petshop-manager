@@ -27,8 +27,7 @@
             <p class="menu-label">AGENDAMENTOS</p>
             <ul class="menu-list">
                 <li><a href="${pageContext.request.contextPath}/views/new-appointment.jsp" class="${param.activePage == 'novo-agendamento' ? 'is-active' : ''}">Novo agendamento</a></li>
-                <li><a href="${pageContext.request.contextPath}/views/pending-appointments.jsp" class="${param.activePage == 'agendamentos-pendentes' ? 'is-active' : ''}">Agendamentos pendentes</a></li>
-                <li><a href="${pageContext.request.contextPath}/views/launch.jsp" class="${param.activePage == 'lancamento' ? 'is-active' : ''}">Lançamento</a></li>
+                <li><a href="${pageContext.request.contextPath}/views/appointments.jsp" class="${param.activePage == 'agendamentos' ? 'is-active' : ''}">Todos Agendamentos</a></li>
                 <li><a href="${pageContext.request.contextPath}/views/resume.jsp" class="${param.activePage == 'relatorio' ? 'is-active' : ''}">Relatório</a></li>
             </ul>
         </aside>

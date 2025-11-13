@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ include file="/aut.jsp" %>
 
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="light">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/dashboard-layout.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/views.css">
 
 </head>
 
@@ -38,11 +40,42 @@
                     <input class="input" type="text" placeholder="Buscar por ...">
                 </div>
 
-                <button class="button is-success">
+                <a href="${pageContext.request.contextPath}/registers/dog-register.jsp" class="button is-success">
                     Novo Cão
-                </button>
+                </a>
                 
             </div>
+           
+           	<table class="table is-fullwidth is-hoverable ps-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Raça</th>
+                        <th>Porte</th>
+                        <th>CPF do Dono</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                
+                	<jsp:useBean id="dao" class="br.tsi.petshop.dao.DogDAO" />
+                	<jsp:useBean id="clientDao" class="br.tsi.petshop.dao.ClientDAO" />
+                	
+                	<c:forEach var="dog" items="${dao.dogsList()}" varStatus="id">
+						<tr>
+							<td>${dog.id}</td>
+							<td>${dog.name}</td>
+							<td>${dog.size}</td>
+							<td>${dog.dogBreed}</td>
+							
+							<c:set var="client" value="${clientDao.search(dog.ownerId)}"/>
+							<td>${client.cpfFormatted}</td>
+						</tr>
+					</c:forEach>
+                
+                </tbody>
+            </table>
            
         </div>
         

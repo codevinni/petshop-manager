@@ -8,12 +8,14 @@ public class ConnectionFactory {
 
 	public static Connection getConnection() {
 		
-		final String URL = "";
+		final String URL = "jdbc:postgresql://localhost/petshop",
+			  USER = "postgres",
+			  PASS = "admin";
 		
 		try {			
 			
 			Class.forName("org.postgresql.Driver");
-			return DriverManager.getConnection(URL);
+			return DriverManager.getConnection(URL, USER, PASS);
 			
 		} catch (SQLException | ClassNotFoundException e) {
 

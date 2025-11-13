@@ -21,33 +21,36 @@
 		<c:import url="/components/header.jsp"></c:import>
 		
 		<div id="login-box" class="container is-fluid">
-	
-			<div class="field">
-				<p class="control has-icons-left has-icons-right">
-					<input class="input is-medium" type="text" placeholder="User">
-					<span class="icon is-small is-left">
-						<i class="fas fa-user"></i>
-					</span>
-				</p>
-			</div>
+			<form action="${pageContext.request.contextPath}/controllersvlt" method="post">
 			
-			<div class="field">
-				<p class="control has-icons-left">
-					<input class="input is-medium" type="password" placeholder="Password">
-					<span class="icon is-small is-left">
-					<i class="fas fa-lock"></i>
-					</span>
-				</p>
-			</div>
-			
-			<div class="field">
-				<p class="control">
-					<button class="is-medium button is-success">
-						Login
-					</button>
-				</p>
-			</div>
+				<input type="hidden" name="action" value="LoginAction">
+				
+				<div class="field">
+					<p class="control has-icons-left has-icons-right">
+						<input class="input is-medium" type="text" name="username" placeholder="User" required>
+						<span class="icon is-small is-left">
+							<i class="fas fa-user"></i>
+						</span>
+					</p>
+				</div>
 		
+				<div class="field">
+					<p class="control has-icons-left">
+						<input class="input is-medium" type="password" name="password" placeholder="Password" required>
+						<span class="icon is-small is-left">
+							<i class="fas fa-lock"></i>
+						</span>
+					</p>
+				</div>
+		
+				<div class="field">
+					<p class="control">
+						<button type="submit" class="is-medium button is-success">
+							Login
+						</button>
+					</p>
+				</div>
+			</form>
 		</div>
 		
 	</body>

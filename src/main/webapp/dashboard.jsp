@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ include file="aut.jsp" %>
 
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="light">
@@ -13,30 +14,36 @@
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/dashboard-layout.css">
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/dashboard-layout.css">
 </head>
 
-<body>
+<style>
+	.ps-center-msg{
+		font-size: 30px;
+		font-weight: bold;
+		color: #d9d9d9;
+	}
+</style>
 
-    <c:import url="/components/header.jsp"/>
+<body>
+	
+    <c:import url="/components/header.jsp"></c:import>
 
     <div class="columns ps-main">
 
         <c:import url="/components/sidebar.jsp">
-        	<c:param name="activePage" value="lancamento"/>
+        	<c:param name="activePage" value=""/>
         </c:import>
 
-        <div class="column ps-content">
-
-            
-           
+        <div class="is-align-items-center is-justify-content-center has-text-centered column is-flex">
+                <div class="ps-center-msg">NAVEGUE ATRAVÉS DO MENU LATERAL</div>
         </div>
         
     </div>
 
-    <c:import url="/components/footer.jsp"/>
+     <c:import url="/components/footer.jsp"></c:import>
 
 </body>
 
+<script src="https://kit.fontawesome.com/42a12cf5f7.js"></script>
 </html>

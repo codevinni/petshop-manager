@@ -12,6 +12,11 @@
 	box-shadow: 0 0 0 0.125em rgba(51, 154, 105, 0.25) !important;
 }
 
+select:focus {
+	border-color: #339a69 !important;
+	box-shadow: 0 0 0 0.125em rgba(51, 154, 105, 0.25) !important;
+}
+
 .button.is-success {
 	background-color: #339a69;
 	font-weight: bold;

@@ -47,35 +47,37 @@
                 </a>
                 
             </div>
-           
-           	<table class="table is-fullwidth is-hoverable ps-table">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>CPF</th>
-                        <th>Nascimento</th>
-                        <th>E-mail</th>
-                        <th>Telefone</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                
-                	<jsp:useBean id="dao" class="br.tsi.petshop.dao.ClientDAO" />
-                	
-                	<c:forEach var="client" items="${dao.clientsList()}" varStatus="id">
-						<tr>
-							<td>${client.name}</td>
-							<td>${client.cpfFormatted}</td>
-							<td>${client.birthFormatted}</td>
-							<td>${client.email}</td>
-							<td>${client.number}</td>
-						</tr>
-					</c:forEach>
-                
-                </tbody>
-            </table>
-           
+            
+           	<div class="box ps-table-container">
+	           	<table class="table is-fullwidth is-hoverable">
+	                <thead>
+	                    <tr>
+	                        <th>Nome</th>
+	                        <th>CPF</th>
+	                        <th>Nascimento</th>
+	                        <th>E-mail</th>
+	                        <th>Telefone</th>
+	                    </tr>
+	                </thead>
+	
+	                <tbody>
+	                
+	                	<jsp:useBean id="dao" class="br.tsi.petshop.dao.ClientDAO" />
+	                	
+	                	<c:forEach var="client" items="${dao.clientsList()}" varStatus="id">
+							<tr>
+								<td>${client.name}</td>
+								<td>${client.cpfFormatted}</td>
+								<td>${client.birthFormatted}</td>
+								<td>${client.email}</td>
+								<td>${client.number}</td>
+							</tr>
+						</c:forEach>
+	                
+	                </tbody>
+	            </table>
+           	</div>
+           	
         </div>
         
     </div>

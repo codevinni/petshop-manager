@@ -45,38 +45,39 @@
                 </a>
                 
             </div>
-           
-           	<table class="table is-fullwidth is-hoverable ps-table">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Nome</th>
-                        <th>Raça</th>
-                        <th>Porte</th>
-                        <th>CPF do Dono</th>
-                    </tr>
-                </thead>
+            <div class="box ps-table-container">
+	           	<table class="table is-fullwidth is-hoverable">
+	                <thead>
+	                    <tr>
+	                        <th>Id</th>
+	                        <th>Nome</th>
+	                        <th>Raça</th>
+	                        <th>Porte</th>
+	                        <th>CPF do Dono</th>
+	                    </tr>
+	                </thead>
+	
+	                <tbody>
+	                
+	                	<jsp:useBean id="dao" class="br.tsi.petshop.dao.DogDAO" />
+	                	<jsp:useBean id="clientDao" class="br.tsi.petshop.dao.ClientDAO" />
+	                	
+	                	<c:forEach var="dog" items="${dao.dogsList()}" varStatus="id">
+							<tr>
+								<td>${dog.id}</td>
+								<td>${dog.name}</td>
+								<td>${dog.size}</td>
+								<td>${dog.dogBreed}</td>
+								
+								<c:set var="client" value="${clientDao.search(dog.ownerId)}"/>
+								<td>${client.cpfFormatted}</td>
+							</tr>
+						</c:forEach>
+	                
+	                </tbody>
+	            </table>
+	        </div>
 
-                <tbody>
-                
-                	<jsp:useBean id="dao" class="br.tsi.petshop.dao.DogDAO" />
-                	<jsp:useBean id="clientDao" class="br.tsi.petshop.dao.ClientDAO" />
-                	
-                	<c:forEach var="dog" items="${dao.dogsList()}" varStatus="id">
-						<tr>
-							<td>${dog.id}</td>
-							<td>${dog.name}</td>
-							<td>${dog.size}</td>
-							<td>${dog.dogBreed}</td>
-							
-							<c:set var="client" value="${clientDao.search(dog.ownerId)}"/>
-							<td>${client.cpfFormatted}</td>
-						</tr>
-					</c:forEach>
-                
-                </tbody>
-            </table>
-           
         </div>
         
     </div>

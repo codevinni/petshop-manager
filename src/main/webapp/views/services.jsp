@@ -40,34 +40,36 @@
                 
             </div>
            
-           	<table class="table is-fullwidth is-hoverable ps-table is-vcentered">
-                 <thead>
-		            <tr>
-		                <th class="">Serviço</th>
-		                <th class="">Preço (R$)</th>
-		                <th></th>
-		            </tr>
-		        </thead>
-		
-		        <tbody>
-		        
-		            <jsp:useBean id="dao" class="br.tsi.petshop.dao.ServiceDAO" />
-		
-		            <c:forEach var="service" items="${dao.listAll()}" varStatus="id">
-		                <tr>
-		                    <td class="">${service.name}</td>
-		                    <td class="">R$ <fmt:formatNumber value="${service.price}" type="number" minFractionDigits="2" maxFractionDigits="2"/></td>
-		                    <td class="has-text-right">
-		                    	<a href="${pageContext.request.contextPath}/registers/service-edit.jsp?name=${service.name}" class="mr-4 button is-success">
-                    				Editar
-                				</a>
-                			</td>
-		                </tr>
-		            </c:forEach>
-		            
-		        </tbody>
-            </table>
-           
+            <div class="box ps-table-container">
+	           	<table class="table is-fullwidth is-hoverable is-vcentered">
+	                 <thead>
+			            <tr>
+			                <th class="">Serviço</th>
+			                <th class="">Preço (R$)</th>
+			                <th></th>
+			            </tr>
+			        </thead>
+			
+			        <tbody>
+			        
+			            <jsp:useBean id="dao" class="br.tsi.petshop.dao.ServiceDAO" />
+			
+			            <c:forEach var="service" items="${dao.listAll()}" varStatus="id">
+			                <tr>
+			                    <td class="">${service.name}</td>
+			                    <td class="">R$ <fmt:formatNumber value="${service.price}" type="number" minFractionDigits="2" maxFractionDigits="2"/></td>
+			                    <td class="has-text-right">
+			                    	<a href="${pageContext.request.contextPath}/registers/service-edit.jsp?name=${service.name}" class="mr-4 button is-success">
+	                    				Editar
+	                				</a>
+	                			</td>
+			                </tr>
+			            </c:forEach>
+			            
+			        </tbody>
+	            </table>       
+	        </div>
+	        
         </div>
         
     </div>

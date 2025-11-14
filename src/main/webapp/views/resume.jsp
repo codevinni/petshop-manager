@@ -73,28 +73,30 @@
 	            R$ <fmt:formatNumber value="${total}" type="number" minFractionDigits="2" maxFractionDigits="2"/>
 	        </p>
           
-           	<table class="table is-fullwidth is-hoverable ps-table">
-		        <thead>
-		            <tr>
-		                <th>ID do Agendamento</th>
-		                <th>Data da Realização</th>
-		                <th>Valor Total</th>
-		            </tr>
-		        </thead>
-		
-		        <tbody>
-		           
-			        <c:forEach var="p" items="${provisions}">
+          	<div class="box ps-table-container">
+	           	<table class="table is-fullwidth is-hoverable">
+			        <thead>
 			            <tr>
-			                <td>${p.appointmentId}</td>
-			                <td>${p.dateFormatted}</td>
-			                <td>R$ <fmt:formatNumber value="${p.totalValue}" type="number" minFractionDigits="2" maxFractionDigits="2"/></td>
+			                <th>ID do Agendamento</th>
+			                <th>Data da Realização</th>
+			                <th>Valor Total</th>
 			            </tr>
-			        </c:forEach>
-		               
-		        </tbody>
-		    </table>
-           
+			        </thead>
+			
+			        <tbody>
+			           
+				        <c:forEach var="p" items="${provisions}">
+				            <tr>
+				                <td>${p.appointmentId}</td>
+				                <td>${p.dateFormatted}</td>
+				                <td>R$ <fmt:formatNumber value="${p.totalValue}" type="number" minFractionDigits="2" maxFractionDigits="2"/></td>
+				            </tr>
+				        </c:forEach>
+			               
+			        </tbody>
+			    </table>
+	        </div>
+    
         </div>
         
     </div>

@@ -2,6 +2,8 @@
 
 **PetShop Manager** é um sistema web de gerenciamento desenvolvido para pet shops controlarem de forma eficiente clientes, cães e serviços. O sistema permite que administradores cadastrem clientes e pets, gerenciem serviços, agendem atendimentos, apliquem descontos e gerem relatórios detalhados de serviços executados — tudo através de um ambiente seguro controlado por sessões.
 
+<img width="1722" height="909" alt="Captura de tela 2026-01-20 143256" src="https://github.com/user-attachments/assets/c223e322-b943-4481-9660-e638836bcc3e" />
+
 ## Sobre
 
 Este projeto foi desenvolvido como parte de um trabalho acadêmico com o objetivo de demonstrar a implementação de uma aplicação web utilizando a arquitetura **MVC (Model-View-Controller)** com **Jakarta EE**.

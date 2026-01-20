@@ -1,9 +1,6 @@
 --
 -- PostgreSQL database dump
 --
-
-\restrict TjhQb0AFCoNRH2SC7yqq9hOfOXOaD99U0SHGUgydJJXe9aQPG9a9P2u9crF3GZ2
-
 -- Dumped from database version 18.0
 -- Dumped by pg_dump version 18.0
 
@@ -490,6 +487,3 @@ ALTER TABLE ONLY public.agendamento_servicos
 --
 -- PostgreSQL database dump complete
 --
-
-\unrestrict TjhQb0AFCoNRH2SC7yqq9hOfOXOaD99U0SHGUgydJJXe9aQPG9a9P2u9crF3GZ2
-
